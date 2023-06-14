@@ -1,15 +1,15 @@
 - hosts: all
   tasks:
     - name: Import apache
-      import_role:
+      import_playbook:
         name: apache.yml
 
     - name: Import Mysql
-      import_role:
+      import_playbook:
         name: mysql.yml
 
     - name: Import Docker
-      import_role:
+      import_playbook:
         name: docker.yml
 
 
