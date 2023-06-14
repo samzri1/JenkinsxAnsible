@@ -1,0 +1,12 @@
+- name: Install Docker
+  user: azureuser
+  hosts: webserver
+  become: True
+  become_user: root
+  tasks:
+    - name: test installation
+      apt:   package={{   item   }}   state=present   force=yes update_cache=yes cache_valid_time=3600
+      when: ansible_os_family == "Debian"
+      with_items:
+        - docker.io
+      shell : sudo docker run -d -p 80:80 -h nginxtfb13 nevii/tfb13nginx-arap22-ren-t:latest

@@ -1,0 +1,16 @@
+hosts: all
+  tasks:
+    - name: Import apache
+      import_role:
+        name: apache.yml
+
+    - name: Import Mysql
+      import_role:
+        name: mysql.yml
+
+    - name: Import Docker
+      import_role:
+        name: docker.yml
+
+
+
