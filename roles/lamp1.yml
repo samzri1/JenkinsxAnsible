@@ -3,6 +3,6 @@
 - name: Install apache
   ansible.builtin.import_playbook: apache.yml
 - name: Install mysql
-  ansible.builtin.import_playbook: mysql
+  ansible.builtin.import_playbook: mysql.yml
 - name: Install docker
   ansible.builtin.import_playbook: docker.yml
